@@ -1,14 +1,24 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import Sidebar from './Sections/Sidebar';
+import Navbar from './Sections/Navbar';
+import Hero from './Sections/Hero';
+import Performance from './Sections/Performance';
+import InstalledApps from './Sections/InstalledApps';
 import './App.css';
+// import './output.css';
 
 function App() {
-    const [count, setCount] = useState(0);
+    // const [count, setCount] = useState(0);
 
     return (
-        <div>
-            <h1 class='text-3xl font-bold underline'>Hello world!</h1>
+        <div className='bg-[#F2F4F7] flex flex-row'>
+            <Sidebar />
+            <div className='w-full'>
+                <Navbar />
+                <Hero />
+                {/* <Performance /> */}
+                {/* <InstalledApps /> */}
+            </div>
         </div>
     );
 }
