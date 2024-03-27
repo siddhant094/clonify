@@ -5,6 +5,17 @@
 // are generally logged in for a longer duration of time 6
 // months or so.
 
+// Logic: to find the monthly logged in users, we need to check that the
+// logged in date is greater than the logout date or the logout date is null
+// and login date is not null.
+// to find the monthly active users, we need to check if user comes in monthly
+// logged in list and then check if his last seen date is greater than 30 days before present date.
+
+// Assumption:
+// The logged_in and logged_out timestamps are always before or equal to the lastSeenAt timestamp.
+// The monthly logged in users are those whose status is logged in from any one device in that month.
+// The monthly active users are those whose were last seen in previous 30 days.
+// One user even if active from multiple devices is counted only once.
 interface User {
     logged_in: Date;
     logged_out: Date | null;
