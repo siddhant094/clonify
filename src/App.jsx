@@ -16,8 +16,8 @@ function App() {
             <div className='w-full'>
                 <Navbar />
                 <Hero />
-                {/* <Performance /> */}
-                {/* <InstalledApps /> */}
+                <Performance />
+                <InstalledApps />
             </div>
         </div>
     );

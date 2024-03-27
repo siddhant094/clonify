@@ -1,9 +1,44 @@
 import React from 'react';
+import Card from '../Components/Card';
+
+const CardData = [
+    {
+        heading: 'Revenue',
+        amount: '$56,945',
+        profit: '+45%',
+        color: 'green',
+        from: 'From 4.6%',
+        sidetext: true,
+    },
+    {
+        heading: 'Users',
+        amount: '76.8%',
+        profit: '-1.7%',
+        color: 'red',
+        from: 'From 4.6%',
+        sidetext: true,
+    },
+    {
+        heading: 'New Signups',
+        amount: '116',
+        profit: '0.00',
+        color: '',
+        sidetext: false,
+    },
+    {
+        heading: 'Retention',
+        amount: '12.67%',
+        profit: '+0.6%',
+        color: 'green',
+        from: 'From 4.6%',
+        sidetext: true,
+    },
+];
 
 const Hero = () => {
     return (
-        <div>
-            <div className='p-6 m-6 rounded-2xl bg-[#282828] text-white font-[Inter] flex justify-between items-center'>
+        <div className='mx-6'>
+            <div className='p-6 my-6 rounded-2xl bg-[#282828] text-white font-[Inter] flex justify-between items-center'>
                 <div className='flex flex-col gap-2'>
                     <h3 className='font-semibold leading-8 text-3xl tracking-tight'>
                         Unlock premium stats
@@ -34,6 +69,11 @@ const Hero = () => {
                         Upgrade
                     </span>
                 </button>
+            </div>
+            <div className='grid grid-cols-4 gap-5'>
+                {CardData.map((prop) => {
+                    return <Card prop={prop} />;
+                })}
             </div>
         </div>
     );
