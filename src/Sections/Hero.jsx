@@ -38,12 +38,12 @@ const CardData = [
 const Hero = () => {
     return (
         <div className='mx-6'>
-            <div className='p-6 my-6 rounded-2xl bg-[#282828] text-white font-[Inter] flex justify-between items-center'>
+            <div className='p-6 my-6 rounded-2xl bg-[#282828] text-white font-[Inter] flex max-sm:flex-col md:flex-row justify-between items-center'>
                 <div className='flex flex-col gap-2'>
                     <h3 className='font-semibold leading-8 text-3xl tracking-tight'>
                         Unlock premium stats
                     </h3>
-                    <h3 className='font-light leading-6 text-sm'>
+                    <h3 className='font-light leading-6 text-sm max-sm:px-6 max-sm:py-2 max-sm:text-center'>
                         Get up to 10TB of storage for a limited time
                     </h3>
                 </div>
@@ -70,7 +70,7 @@ const Hero = () => {
                     </span>
                 </button>
             </div>
-            <div className='grid grid-cols-4 gap-5'>
+            <div className='grid max-sm:grid-cols-1 max-sm:grid-rows-4 md:grid-cols-4 gap-5'>
                 {CardData.map((prop) => {
                     return <Card prop={prop} />;
                 })}

@@ -55,48 +55,50 @@ const InstalledApps = () => {
                 Installed Apps
                 <img src='dots.png' alt='' className='h-6' />
             </div>
-            <div>
-                <div className='grid grid-cols-6 px-6 py-4 bg-[#F9FAFB] text-[#5F6980] text-sm'>
-                    <span>Source</span>
-                    <span>Amount</span>
-                    <span>Status</span>
-                    <span>User ID</span>
-                    <span>Joined</span>
-                    <span>Group</span>
-                </div>
-                {appData.map((item) => {
-                    console.log(item);
-                    return (
-                        <div className='grid grid-cols-6 px-4 py-1 text-[#5F6980] items-center border-[#EAECF0] border-b text-sm'>
-                            <div className='flex items-center'>
-                                <img
-                                    src={`${item.name.toLowerCase()}.png`}
-                                    alt=''
-                                    srcset={`${item.name.toLowerCase()}.png`}
-                                    className='w-16'
-                                />
-                                <span className='text-[#282828] font-semibold text-sm'>
-                                    {item.name}
+            <div className='max-sm:overflow-x-scroll'>
+                <div className='max-sm:w-[1100px]'>
+                    <div className='grid grid-cols-6 px-6 py-4 bg-[#F9FAFB] text-[#5F6980] text-sm'>
+                        <span>Source</span>
+                        <span>Amount</span>
+                        <span>Status</span>
+                        <span>User ID</span>
+                        <span>Joined</span>
+                        <span>Group</span>
+                    </div>
+                    {appData.map((item) => {
+                        console.log(item);
+                        return (
+                            <div className='grid grid-cols-6 px-4 py-1 text-[#5F6980] items-center border-[#EAECF0] border-b text-sm'>
+                                <div className='flex items-center'>
+                                    <img
+                                        src={`${item.name.toLowerCase()}.png`}
+                                        alt=''
+                                        srcset={`${item.name.toLowerCase()}.png`}
+                                        className='w-16'
+                                    />
+                                    <span className='text-[#282828] font-semibold text-sm'>
+                                        {item.name}
+                                    </span>
+                                </div>
+                                <span>{item.amount}</span>
+                                <span
+                                    className={`${
+                                        item.color == 'green'
+                                            ? 'bg-[#DCFFF5] text-[#20C997]'
+                                            : item.color == 'orange'
+                                            ? 'bg-[#FFEAD8] text-[#FD7E14]'
+                                            : 'text-[#5F6980] bg-[#F2F4F7]'
+                                    } rounded-full px-2 py-1 text-xs font-semibold w-fit`}
+                                >
+                                    {item.status}
                                 </span>
+                                <span>{item.userId}</span>
+                                <span>{item.joined}</span>
+                                <span>{item.Group}</span>
                             </div>
-                            <span>{item.amount}</span>
-                            <span
-                                className={`${
-                                    item.color == 'green'
-                                        ? 'bg-[#DCFFF5] text-[#20C997]'
-                                        : item.color == 'orange'
-                                        ? 'bg-[#FFEAD8] text-[#FD7E14]'
-                                        : 'text-[#5F6980] bg-[#F2F4F7]'
-                                } rounded-full px-2 py-1 text-xs font-semibold w-fit`}
-                            >
-                                {item.status}
-                            </span>
-                            <span>{item.userId}</span>
-                            <span>{item.joined}</span>
-                            <span>{item.Group}</span>
-                        </div>
-                    );
-                })}
+                        );
+                    })}
+                </div>
             </div>
         </div>
     );
