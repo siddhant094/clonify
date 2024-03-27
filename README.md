@@ -1,8 +1,24 @@
-# React + Vite
+# Clonify
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Link: https://clonify-rho.vercel.app/
 
-Currently, two official plugins are available:
+I was able to completely implement both the Screens.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Task 1 and 2 can be found under src/tasks as task1.ts and task2.ts.
+
+The code is divided into 5 components: 
+
+Hero
+
+InstalledApps
+
+NavBar
+
+Sidebar
+
+Performance
+
+
+All of them are present under src/Sections
+
+I have also created a reusable component Card inside src/components/Card.jsx
