@@ -40,7 +40,7 @@ const Hero = () => {
         <div className='mx-6'>
             <div className='p-6 my-6 rounded-2xl bg-[#282828] text-white font-[Inter] flex max-sm:flex-col md:flex-row justify-between items-center hover:shadow-2xl transition'>
                 <div className='flex flex-col gap-2'>
-                    <h3 className='font-semibold leading-8 text-3xl tracking-tight'>
+                    <h3 className='font-semibold leading-8 text-3xl tracking-tight max-sm:text-center'>
                         Unlock premium stats
                     </h3>
                     <h3 className='font-light leading-6 text-sm max-sm:px-6 max-sm:py-2 max-sm:text-center'>
