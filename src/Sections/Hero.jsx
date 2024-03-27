@@ -38,7 +38,7 @@ const CardData = [
 const Hero = () => {
     return (
         <div className='mx-6'>
-            <div className='p-6 my-6 rounded-2xl bg-[#282828] text-white font-[Inter] flex max-sm:flex-col md:flex-row justify-between items-center'>
+            <div className='p-6 my-6 rounded-2xl bg-[#282828] text-white font-[Inter] flex max-sm:flex-col md:flex-row justify-between items-center hover:shadow-2xl transition'>
                 <div className='flex flex-col gap-2'>
                     <h3 className='font-semibold leading-8 text-3xl tracking-tight'>
                         Unlock premium stats
@@ -47,7 +47,7 @@ const Hero = () => {
                         Get up to 10TB of storage for a limited time
                     </h3>
                 </div>
-                <button className='bg-white text-black flex flex-row items-center rounded-full px-4 py-2 gap-1'>
+                <button className='bg-white text-black flex flex-row items-center rounded-full px-6 py-2 gap-1'>
                     {/* <img src='bolt.png' alt='' srcset='' className='h-6' /> */}
                     <svg
                         width='20'

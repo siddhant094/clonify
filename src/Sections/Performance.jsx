@@ -54,7 +54,7 @@ const Performance = () => {
         },
     });
     return (
-        <div className='bg-white mx-6 mt-6 rounded-xl font-[Inter]'>
+        <div className='bg-white mx-6 mt-6 rounded-xl font-[Inter] hover:shadow-xl transition'>
             <div className='flex justify-between items-center px-6 py-4 font-semibold text-lg border-[#EAECF0] border-b'>
                 Performance
                 <img src='dots.png' alt='' className='h-6' />

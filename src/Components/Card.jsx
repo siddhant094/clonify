@@ -3,7 +3,7 @@ import React from 'react';
 const Card = ({ prop }) => {
     console.log(prop);
     return (
-        <div className='bg-white p-5 rounded-xl flex flex-col font-[Inter] shadow-sm'>
+        <div className='bg-white p-5 rounded-xl flex flex-col font-[Inter] shadow-sm hover:shadow-xl transition'>
             <span className='text-[#5F6980] leading-6'>{prop.heading}</span>
             <span className='font-semibold leading-7 text-2xl mb-8 mt-1'>
                 {prop.amount}

@@ -50,7 +50,7 @@ const appData = [
 
 const InstalledApps = () => {
     return (
-        <div className='bg-white rounded-xl m-6 font-[Inter]'>
+        <div className='bg-white rounded-xl m-6 font-[Inter] hover:shadow-xl transition'>
             <div className='flex justify-between items-center px-6 py-4 font-semibold text-lg border-[#EAECF0] border-b'>
                 Installed Apps
                 <img src='dots.png' alt='' className='h-6' />
@@ -99,6 +99,11 @@ const InstalledApps = () => {
                         );
                     })}
                 </div>
+            </div>
+            <div className='flex items-center justify-center gap-3 p-4'>
+                <img src='arrow-left.png' alt='arrow-left' className='w-6' />
+                <span className='text-lg'>1/15</span>
+                <img src='arrow-right.png' alt='arrow-right' className='w-6' />
             </div>
         </div>
     );

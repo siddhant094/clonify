@@ -11,7 +11,7 @@ function App() {
     // const [count, setCount] = useState(0);
 
     return (
-        <div className='bg-[#F2F4F7] flex flex-row'>
+        <div className='bg-[#F2F4F7] flex flex-row items-start'>
             <Sidebar />
             <div className='w-full'>
                 <Navbar />
